@@ -12,7 +12,7 @@ if(!$conn)
 {
 die("connection failed:" .mysqli_connect_error());
 }
-$sql="INSERT INTO student VALUES ('$id','$course_1','$course_2','$percentage')");
+$sql="INSERT INTO student VALUES ('$id','$course_1','$course_2','$course_3','$course_4','$percentage')");
 
 if(mysqli_query($conn,$sql)){
 echo "success";
