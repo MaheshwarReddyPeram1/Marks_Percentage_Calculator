@@ -33,13 +33,13 @@ $conn = mysqli_connect("localhost", "admin", "admin", "employee");
 if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);
 }
-$sql = "SELECT id, course_1, course_2 , percentage FROM student ORDER BY id";
+$sql = "SELECT id, course_1, course_2 , course_3, course_4 , percentage FROM student ORDER BY id";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 // output data of each row
 while($row = $result->fetch_assoc()) {
 echo "<tr><td>" . $row["id"]. "</td><td>" . $row["course_1"] . "</td><td>"
-. $row["course_2"]. "</td><td>" . $row["percentage"]. "</td></tr>";
+. $row["course_2"]. "</td><td>" . $row["course_3"] . $row["course_4"] . "</td><td>" "</td><td>" $row["percentage"]. "</td></tr>";
 }
 echo "</table>";
 } else { echo "0 results"; }
